@@ -1,0 +1,74 @@
+Options -Indexes
+
+AddDefaultCharset UTF-8
+
+# Redirects
+ErrorDocument 403 /project/
+ErrorDocument 404 /project/
+
+<IfModule mime_module>
+	AddCharset UTF-8 .css .htm .html .js .php .txt
+</IfModule>
+
+<IfModule alias_module>
+	#redirect 301 (permanent) of "old_directory" to "new_directory", optional "old_directory" year subdirectory is removed
+	#RedirectMatch permanent /old_directory(/[0-9]{4})?(/.*)?$ /new_directory$2
+	#RedirectMatch permanent /project2(/.*)?$ /project$1
+</IfModule>
+
+<IfModule env_module>
+<IfModule rewrite_module>
+	RewriteEngine on
+
+	# Redirect to 404 when index.php is missing
+	# RewriteCond %{REQUEST_FILENAME} -d
+	# RewriteRule ^(.*)/?$ $1/index.php [NC,QSA,L]
+
+	# Set variable (through env_module) informing that rewrite_module is ENABLED, so PHP may know it
+	# THIS IS NOT ENOUGH, since there is no way to check wether "RewriteEngine" was successfully changed to "on"
+	# SetEnv HTTP_REWRITE_MODULE on
+
+	# If it is an existing folder or file, skip the next S rules
+	#RewriteCond %{REQUEST_FILENAME} -f [OR]
+	#RewriteCond %{REQUEST_FILENAME} -d
+	#RewriteRule  .?  -  [S=7]
+
+	# URL to check if rewrite_module is working
+	#RewriteRule ^include/checkfiles/apache_rewrite_module.test$ include/checkfiles/apache_rewrite_module [L]
+
+	# /editor/index.php?text_id=1&directory_id=2 -> /editor/1_2
+	#RewriteRule ^editor/([^_]*)_([^_]*)/?$ editor/index.php?text_id=$1&directory_id=$2 [NC,QSA,L]
+
+	# /editor/index.php?text_id=1 -> /editor/1
+	#RewriteRule ^editor/([^/]+)/?$ editor/index.php?text_id=$1 [NC,QSA,L]
+
+	# /forum/message.php?topic=1 -> /forum/mensagens/1
+	#RewriteRule ^forum/mensagens/([^/]+)/?$ forum/message.php?topic=$1 [NC,QSA,L]
+
+	# /forum/index.php?directory=1 -> /forum/1
+	#RewriteRule ^forum/([^/]+)/?$ forum/index.php?directory=$1 [NC,QSA,L]
+
+	# /documents/index.php?directory=1 -> /documents/1
+	#RewriteRule ^documents/([^/]+)/?$ documents/index.php?directory=$1 [NC,QSA,L]
+
+	# /view_text.php?1 -> /view/1
+	#RewriteRule ^view/([^/]+)/?$ view_text.php?$1 [NC,QSA,L]
+</IfModule>
+</IfModule>
+
+
+# PHP MEMORY LIMITS - This must be respected: memory_limit > post_max_size > upload_max_filesize
+# INFO: "memory_limit" is the only value that can also be changed via "ini_set()"
+php_value memory_limit			64M
+php_value post_max_size			32M
+php_value upload_max_filesize	16M
+
+# PHP MISC
+# php_value include_path		/var/www/project/sources/php
+php_flag short_open_tag			off
+php_value max_execution_time	20
+
+# below values can not be changed here
+# php_flag file_uploads			on
+# php_flag log_errors			on
+# php_value error_log			/tmp/error.log

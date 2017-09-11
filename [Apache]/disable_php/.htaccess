@@ -1,0 +1,7 @@
+# disable PHP
+php_flag engine off
+
+# enable PHP for filenames ending with "index.php" ("~" means "use regex")
+<Files ~ "index\.php$">
+	php_flag engine on
+</Files>

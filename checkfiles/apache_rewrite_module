@@ -1,0 +1,4 @@
+SUCCESS
+
+This file is used by system.inc.php to check whether Apache's rewrite_module is effectively working
+IMPORTANT: first 7 characters must be the exact string "SUCCESS"
