@@ -1,0 +1,20 @@
+[ MAIN ]
+	• Translator: translations management page/system
+
+
+
+
+[account\edit.php] Default editor selector
+[account\token.php] Implement tokens
+[include\js\folder_tree.js] prettifyURL() / prettifyURL
+[include\php\class_basic.inc.php] getHTTPRequestFinalStatus() getHTTPRequestFinalStatusCode() isHTTPResourceAvailable()
+[include\php\class_pdo.inc.php] error()
+[include\php\htmlpage.inc.php] new 'CENTERED' model
+[include\php\htmlpage.inc.php] prettifyURL()
+[include\php\htmlpage.inc.php] getOptimalFilePath()
+[include\php\htmlpage.inc.php] REWRITE_MODULE_ENABLED
+[login\sign_up.php] initial password newUniqueName()
+[include\php\session.inc.php] change ajax pages to have a isset( $_GET['ajax'] ) in order to detect ajaxes
+
+doTheMagic() / magicTextInfo
+getAllowedExtension
