@@ -1,0 +1,71 @@
+# default rule, do not touch anything
+# manual: "When more than one pattern matches the path, a later line overrides an earlier line. This overriding is done per attribute."
+# NOT WORKING AS INTENDED, WHETHER ON TOP OR BOTTOM (2015/06)
+# *       -text -diff
+
+# text files that should have line ending normalization (CRLF)
+*.asm     text eol=crlf
+*.bat     text eol=crlf
+*.c       text eol=crlf
+*.cpp     text eol=crlf
+*.cs      text eol=crlf
+*.css     text eol=crlf
+*.h       text eol=crlf
+*.hs      text eol=crlf
+*.htm     text eol=crlf
+*.html    text eol=crlf
+*.inc     text eol=crlf
+*.ini     text eol=crlf
+*.java    text eol=crlf
+*.js      text eol=crlf
+*.lisp    text eol=crlf
+*.lua     text eol=crlf
+*.php     text eol=crlf
+*.py      text eol=crlf
+*.rb      text eol=crlf
+*.rc      text eol=crlf
+*.reg     text eol=crlf
+*.sln     text eol=crlf
+*.txt     text eol=crlf
+*.vb      text eol=crlf
+*.vcproj  text eol=crlf
+*.xml     text eol=crlf
+.htaccess text eol=crlf
+.gitattributes text eol=crlf
+.gitignore     text eol=crlf
+
+# binary files that should be left untouched
+*.7z      -text -diff
+*.ai      -text -diff
+*.ani     -text -diff
+*.bmp     -text -diff
+*.cur     -text -diff
+*.fla     -text -diff
+*.flv     -text -diff
+*.gif     -text -diff
+*.gz      -text -diff
+*.ico     -text -diff
+*.jar     -text -diff
+*.jpeg    -text -diff
+*.jpg     -text -diff
+*.mov     -text -diff
+*.mp3     -text -diff
+*.mp4     -text -diff
+*.png     -text -diff
+*.rar     -text -diff
+*.swf     -text -diff
+*.ttf     -text -diff
+*.wmv     -text -diff
+*.zip     -text -diff
+
+# documents (standard to msysgit)
+*.doc     diff=astextplain
+*.DOC     diff=astextplain
+*.docx    diff=astextplain
+*.DOCX    diff=astextplain
+*.dot     diff=astextplain
+*.DOT     diff=astextplain
+*.pdf     diff=astextplain
+*.PDF     diff=astextplain
+*.rtf     diff=astextplain
+*.RTF     diff=astextplain

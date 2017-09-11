@@ -1,0 +1,80 @@
+# automatically generated files (anything starting with "_" convention)
+_*
+
+# logs and databases
+log.txt
+*.log
+*.sql
+*.sqlite
+
+# local project files
+/nbproject/private/
+
+
+# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+# ▼▼▼ Ignoring Subdirectories - START ▼▼▼
+
+# ignore following directory
+/project/app/build/
+# but do not ignore following subdirectory
+# currently, the following rule does NOT work (previous rule unfortunately also ignore sub-overrides)
+!/project/app/build/outputs/apk/
+# someday it will work, though: https://stackoverflow.com/a/20652768
+
+# UNTIL THEN you must go through each directory ignoring its contents but not the directory itself:
+!/project/app/build/
+/project/app/build/*
+
+!/project/app/build/outputs/
+/project/app/build/outputs/*
+
+!/project/app/build/outputs/apk/
+
+# ▲▲▲ Ignoring Subdirectories - END ▲▲▲▲▲
+# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+# ▼▼▼ OS Files: Windows - START ▼▼▼▼▼▼▼▼▼
+
+# image file caches
+[Tt]humbs.db
+ehthumbs.db
+
+# directory config file
+[Dd]esktop.ini
+
+# recycle bin used on file shares
+$RECYCLE.BIN/
+
+# installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# ▲▲▲ OS Files: Windows - END ▲▲▲▲▲▲▲▲▲▲▲
+# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+# ▼▼▼ OS Files: OSX - START ▼▼▼▼▼▼▼▼▼▼▼▼▼
+
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+
+# icon must ends with two \r.
+Icon
+
+# thumbnails
+._*
+
+# files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# ▲▲▲ OS Files: OSX - END ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+# ▼▼▼ Overrides (!) - START ▼▼▼▼▼▼▼▼▼▼▼▼▼
+
+# do not ignore anything inside any "[*]" directory
+!**/\[*\]/**
+
+# ▲▲▲ Overrides (!) - END ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
