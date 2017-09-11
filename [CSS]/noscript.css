@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+body::before {
+	content:'For intended full functionality, please enable or allow script execution for this website in your browser and refresh the page';
+	padding:1rem;
+	text-align:center;
+	background-color:lightsalmon;
+	/*
+	position:fixed;
+	left:0; right:0;
+	z-index:9;
+	*/
+}
