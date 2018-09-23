@@ -3,7 +3,7 @@
 # NOT WORKING AS INTENDED, WHETHER ON TOP OR BOTTOM (2015/06)
 # *       -text -diff
 
-# text files that should have line ending normalization (CRLF)
+# text files that should have line ending normalization
 *.asm     text eol=crlf
 *.bat     text eol=crlf
 *.c       text eol=crlf
@@ -34,7 +34,7 @@
 .gitattributes text eol=crlf
 .gitignore     text eol=crlf
 
-# binary files that should be left untouched
+# binary files that should be left untouched ("binary" can be used as a macro for "-text -diff")
 *.7z      -text -diff
 *.ai      -text -diff
 *.ani     -text -diff
