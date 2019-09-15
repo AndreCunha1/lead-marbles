@@ -1,0 +1,22 @@
+Microsoft Windows SDK for Windows 7 and .NET Framework 4:
+https://www.microsoft.com/en-us/download/details.aspx?id=8279
+
+Microsoft Windows SDK for Windows 7 and .NET Framework 4 (ISO):
+https://www.microsoft.com/en-us/download/details.aspx?id=8442
+
+
+x64 ISO File Name: GRMSDKX_EN_DVD.iso
+Contains both x86 and x64 versions of WinDiff.exe
+
+
+WinDiff.exe (x86)
+CRC32:   634b2305
+MD5:     6b040a30a3f7c648276b0892804d3052
+SHA-1:   23f973f5b6caffb28a92085786947904cc86a1f6
+SHA-256: a513b34e381bd2f7c70e3acf1f962b3b27e8a65b94042b27ff36692c71a80096
+
+WinDiff.exe (x64)
+CRC32:   b3bb210b
+MD5:     06ee9536ff7c77798431871383c88151
+SHA-1:   5cf76989a209c6b3a0d646de00776e7a4c589ff7
+SHA-256: deded18de43c248df3a80713bf010030285aea6a38a39e0ce5edfe3e9ed788b3
